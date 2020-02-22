@@ -2,3 +2,9 @@
     font-family: "Lato";
     src: url(assets/Lato.ttf);
 }
+
+@font-face {
+    font-family: "Lato-Black";
+    src: url(assets/Lato-Black.ttf);
+    font-weight: 900;
+}
