@@ -24,8 +24,18 @@ phone_vert.addEventListener('click', () => {
     el.classList.toggle('hidden');
 });
 
+document.getElementById('black_vert').addEventListener('click', () => {
+    let el = document.getElementById('black_vert');
+    el.classList.toggle('hidden');
+});
+
 // Выключение горизонтального телефона
 phone_hor.addEventListener('click', () => {
+    let el = document.getElementById('black_hor');
+    el.classList.toggle('hidden');
+});
+
+document.getElementById('black_hor').addEventListener('click', () => {
     let el = document.getElementById('black_hor');
     el.classList.toggle('hidden');
 });
