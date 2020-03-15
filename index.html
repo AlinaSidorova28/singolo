@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <title>Singolo</title>
@@ -11,28 +11,47 @@
         <header>
             <nav class="navigation">
                 <h2 class="logo">SINGOLO</h2>
-                <ul class="menu">
-                    <li>HOME</li>
-                    <li class="list">SERVICES</li>
-                    <li class="list">PORTFOLIO</li>
-                    <li class="list">ABOUT</li>
-                    <li class="list">CONTACT</li>
+                <ul id="menu" class="menu">
+                    <a href="#"><li class="menu_active">HOME</li></a>
+                    <a href="#services"><li class="list">SERVICES</li></a>
+                    <a href="#portfolio"><li class="list">PORTFOLIO</li></a>
+                    <a href="#about"><li class="list">ABOUT</li></a>
+                    <a href="#contact"><li class="list">CONTACT</li></a>
                 </ul>
             </nav>
             <hr size="6" color="#323746">
         </header>
 
-        <div class="slider">
+        <div id="slider" class="slider">
             <div class="slider-content">
-                <img class="arrow_left" src="assets/arrow_left.png" alt="left arrow" height="50" width="50">
-                <img class="iphone_vertical" src="assets/iphone_vertical.png" alt="vertical iphone" height="484" width="240">
-                <img class="iphone-horizontal" src="assets/iphone_horizontal.png" alt="horizontal iphone" height="240" width="484">
-                <img class="arrow_right" src="assets/arrow_right.png" alt="right arrow" height="50" width="50">
+                <div class="slider-items">
+                    <div class="item active">
+                        <div class="phone-items">
+                            <img class="iphone_vertical" src="assets/iphone_vertical.png" alt="vertical iphone" height="484" width="240">
+                            <img class="iphone_horizontal" src="assets/iphone_horizontal.png" alt="horizontal iphone" height="240" width="484">
+                            <div id="black_vert" class="hidden"></div>
+                            <div id="black_hor" class="hidden"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="phones" src="assets/phones.png" width="517" height="513">
+                    </div>
+                </div>
+                <div class="control left">
+                    <div class="arrow left">
+                        <img src="assets/arrow_left.png" alt="left arrow" height="50" width="50">
+                    </div>
+                </div>
+                <div class="control right">
+                    <div class="arrow right">
+                        <img src="assets/arrow_right.png" alt="right arrow" height="50" width="50">
+                    </div>
+                </div>
             </div>
-            <hr size="6" color="#ea676b">
         </div>
+        <hr size="6" color="#ea676b">
 
-        <div class="services">
+        <div id="services" class="services">
             <div class="paragraph">
                 <h1>Our Services</h1>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
@@ -76,15 +95,17 @@
         <hr size="6" color="#ffffff">
 
         <!--part2-->
-        <div class="portfolio">
+        <div id="portfolio" class="portfolio">
             <div class="portfolio-content">
                 <h2>Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                <button>All</button>
-                <button>Web Design</button>
-                <button>Graphic Design</button>
-                <button>Artwork</button>
-                <div class="pictures">
+                <div id="tabs">
+                    <button class="tabs_active">All</button>
+                    <button>Web Design</button>
+                    <button>Graphic Design</button>
+                    <button>Artwork</button>
+                </div>
+                <div id="pictures" class="pictures">
                     <img src="assets/1_1.png" height="187px" width="220px" alt="">
                     <img src="assets/1_2.png" height="187px" width="220px" alt="">
                     <img src="assets/1_3.png" height="187px" width="220px" alt="">
@@ -102,7 +123,7 @@
             <hr size="6" color="#323746">
         </div>
         
-        <div class="about-us">
+        <div id="about" class="about-us">
             <div class="about-us-content">
                 <h2>About Us</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
@@ -150,7 +171,8 @@
         <hr size="6" color="#ffffff">
 
         <!--part 3-->
-        <div class="get_quote">
+        <div id="contact" class="get_quote">
+            
             <div class="get_quote_content">
                 <h2 class="quote">Get a Quote</h2>
                 <p>
@@ -159,15 +181,21 @@
                 </p>
                 <div class="block">
                     <div>
-                        <form>
-                            <input class="data_input" type="text" placeholder="Name (Required)" pattern="^[a-zA-Z\s]+$" required>
-                            <input class="data_input" type="email" placeholder="Email (Required)" required>
-                            <input class="data_input" type="text" placeholder="Subject">
-                            <textarea class="describe" placeholder="Describe your project in detail..."></textarea>
-                            <div class="button">
-                                <input class="submit" type="submit" name="submit" value="Submit">
-                            </div>
+                        <form id="form">
+                            <input id="name" class="data_input" type="text" placeholder="Name (Required)" name="name" required>
+                            <input id="email" class="data_input" type="email" placeholder="Email (Required)" name="email" required>
+                            <input id="subject" class="data_input" type="text" placeholder="Subject">
+                            <textarea id="description" class="describe" placeholder="Describe your project in detail..."></textarea>
+                            <button id="button" class="submit">SEND</button>
                         </form>
+                        <div id="message-block" class="hidden">
+                            <div id="message">
+                                <span>Письмо отправлено</span><br>
+                                <span id="result_obj"></span><br>
+                                <span id="result_desrcipt"></span><br><br>
+                                <button id="close-btn">OK</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="information">
                         <h3 class="contact">Contact Information</h3>
@@ -179,7 +207,7 @@
                         </p>
                         <p class="location">Elm St. 14/05 Lost City</p>
                         <p class="telephone"><a href="tel:035283318635">03528 331 86 35</a></p>
-                        <p class="mail"><a href="maito:info@singolo.com">info@singolo.com</a></p>
+                        <p class="mail"><a href="mailto:info@singolo.com">info@singolo.com</a></p>
                     </div>
                 </div>
             </div>
@@ -196,5 +224,6 @@
                 </div>
             </div>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>
