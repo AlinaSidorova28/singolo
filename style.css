@@ -39,6 +39,11 @@ h3 {
     margin: 0;
 }
 
+hr {
+    height: 6px;
+    border-width: 0;
+}
+
 h3, 
 .services p, 
 .portfolio-content p, 
@@ -135,6 +140,12 @@ a,
     color: #f0d8d9;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
 .logo {
     padding: 0;
     letter-spacing: -0.02em;
@@ -181,11 +192,15 @@ li.menu_active {
 button:not(.tabs_active):hover, 
 .social_media img:hover, 
 .submit:hover, 
-.footer-content img:hover {
+.footer-content img:hover, 
+.vert_phone_button, 
+.hor_phone_button, 
+.pictures img {
     cursor: pointer;
 }
 
-a {
+a, 
+.pictures .border {
     cursor: default;
 }
 
@@ -196,6 +211,19 @@ a {
 .slider-content {
     position: relative;
     height: 594px;
+}
+
+.hr-slider {
+    background-color: #ea676b;
+}
+
+.hr-blue {
+    background-color: #6286e4;
+}
+
+.hr-slider, 
+.hr-blue {
+    transition: 0.6s ease-in-out;
 }
 
 .phone-items{
@@ -432,6 +460,7 @@ button:hover,
 .describe, 
 .submit {
     padding-left: 15px;
+    padding-right: 15px;
     border-width: 0;
     border-radius: 5px;
     outline: none;
@@ -443,7 +472,6 @@ button:hover,
 }
 
 .describe {
-    width: 602.5px;
     height: 193px;
     padding-top: 7.5px;
     margin-bottom: 12px;
@@ -451,8 +479,9 @@ button:hover,
 }
 
 form, 
-.data_input {
-    width: 604.5px;
+.data_input, 
+.describe {
+    width: 590px;
 }
 
 .data_input{
@@ -572,7 +601,8 @@ form,
     display: none;
 }
 
-.border{
+.border, 
+.pictures img:hover {
     outline: 5px solid #f06c64;
     box-shadow: 0 0 10px #f06c64;
 }
@@ -708,5 +738,27 @@ form,
 
 .blue, 
 .slider {
+    margin-top: 95px;
     transition: 0.6s ease-in-out;
+}
+
+.vert_phone_button {
+    top: 86%;
+    left: 17.8%;
+}
+
+.hor_phone_button {
+    left: 42.8%;
+    top: 44.7%;
+}
+
+.vert_phone_button, 
+.hor_phone_button {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+}
+
+#result_desrcipt {
+    overflow-wrap: break-word;
 }

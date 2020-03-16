@@ -1,8 +1,8 @@
 const menu = document.getElementById('menu');
 const slide_prev = document.getElementById('slide_prev');
 const slide_after = document.getElementById('slide_after');
-const phone_vert = document.querySelector('.iphone_vertical');
-const phone_hor = document.querySelector('.iphone_horizontal');
+const phone_vert = document.querySelector('.vert_phone_button');
+const phone_hor = document.querySelector('.hor_phone_button');
 const tabs = document.querySelectorAll('#tabs button');
 const pictures = document.getElementById('pictures');
 const button = document.getElementById('button');
@@ -92,9 +92,11 @@ let isEnabled = true;
 function changeColor(){
     if(items[currentItem].firstElementChild.classList.contains('phones')){
         slider.className = 'blue';
+        document.getElementById('hr').className = 'hr-blue';
     }
     else {
         slider.className = 'slider';
+        document.getElementById('hr').className = 'hr-slider';
     }
 }
 
