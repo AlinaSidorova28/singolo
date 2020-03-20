@@ -1,4 +1,4 @@
-const menu = document.getElementById('menu');
+const links = document.querySelectorAll('#menu a');
 const slide_prev = document.getElementById('slide_prev');
 const slide_after = document.getElementById('slide_after');
 const phone_vert = document.querySelector('.vert_phone_button');
@@ -9,14 +9,44 @@ const button = document.getElementById('button');
 const close_button = document.getElementById('close-btn');
 const slider = document.getElementById('slider');
 
+
 let pic_array = document.querySelectorAll('#pictures img');
 
 
 // Меню с переключением
-menu.addEventListener('click', (event) => {
-    menu.querySelectorAll('li').forEach(el => el.classList.remove('menu_active'));
+links.forEach(el => el.addEventListener('click', (event) => {
+    links.forEach(el => el.classList.remove('menu_active'));
     event.target.classList.add('menu_active');
-});
+}));
+
+// menu.addEventListener('click', (event) => {
+//     menu.querySelectorAll('.menu a').forEach(el => el.classList.remove('menu_active'));
+//     event.target.classList.add('menu_active');
+// });
+
+// document.querySelectorAll('.menu li a').forEach(function(el) {
+//     if ( window.location.pathname.indexOf(el.getAttribute('href')) > -1 ) {
+//         el.classList.add('menu_active');
+//     }
+// });
+
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+    
+    const divs = document.querySelectorAll('.div-wrap');
+    const curPos = window.scrollY;
+    divs.forEach((el) => {
+        if(el.offsetTop <= curPos + 95 && (el.offsetTop + el.offsetHeight) > curPos) {
+            links.forEach((a) => {
+                a.classList.remove('menu_active');
+                if(el.getAttribute('id') === a.getAttribute('href').substring(1)){
+                    a.classList.add('menu_active');
+                }
+            })
+        }
+    })
+}
 
 // Выключение вертикального телефона
 phone_vert.addEventListener('click', () => {
