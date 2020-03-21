@@ -19,17 +19,6 @@ links.forEach(el => el.addEventListener('click', (event) => {
     event.target.classList.add('menu_active');
 }));
 
-// menu.addEventListener('click', (event) => {
-//     menu.querySelectorAll('.menu a').forEach(el => el.classList.remove('menu_active'));
-//     event.target.classList.add('menu_active');
-// });
-
-// document.querySelectorAll('.menu li a').forEach(function(el) {
-//     if ( window.location.pathname.indexOf(el.getAttribute('href')) > -1 ) {
-//         el.classList.add('menu_active');
-//     }
-// });
-
 document.addEventListener('scroll', onScroll);
 
 function onScroll(event) {
@@ -111,11 +100,13 @@ let isEnabled = true;
 
 function changeColor(){
     if(items[currentItem].firstElementChild.classList.contains('phones')){
-        slider.className = 'blue';
+        slider.classList.remove('slider');
+        slider.classList.add('blue');
         document.getElementById('hr').className = 'hr-blue';
     }
     else {
-        slider.className = 'slider';
+        slider.classList.remove('blue');
+        slider.classList.add('slider');
         document.getElementById('hr').className = 'hr-slider';
     }
 }
