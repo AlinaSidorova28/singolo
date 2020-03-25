@@ -31,14 +31,39 @@ footer {
 .get_quote_content, 
 .footer-content, 
 .block {
-    width: 940px;
+    max-width: 1020px;
     margin: 0 auto;
+}
+
+h1,
+h2,
+.paragraph p,
+.portfolio-content p,
+.about-us-content p,
+.get_quote_content p,
+.icons_content,
+#tabs,
+.photos,
+.block {
+    margin-left: 40px;
+}
+
+.menu,
+.paragraph p,
+.portfolio-content p,
+.about-us-content p,
+.get_quote_content p,
+.icons_content,
+.photos,
+.block,
+.footer_media {
+    margin-right: 40px;
 }
 
 body, 
 hr, 
-.icons p, 
-h2, 
+.icons_content p, 
+.information p,
 h3 {
     margin: 0;
 }
@@ -56,7 +81,7 @@ h3,
     font-size: 18px;
 }
 
-.icons p, 
+.icons_content p, 
 .menu li, 
 button, 
 .photos p, 
@@ -74,7 +99,7 @@ button,
 }
 
 .services p, 
-.icons p, 
+.icons_content p, 
 button, 
 .photos p, 
 .data_input::placeholder,  
@@ -98,7 +123,6 @@ footer {
 }
 
 h1 {
-    margin-top: 0;
     font-size: 30px;
     letter-spacing: 0.003em;
 }
@@ -106,6 +130,8 @@ h1 {
 h1, 
 h2:not(.logo) {
     font-family: "Lato-Black", sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h1,
@@ -145,7 +171,7 @@ a,
 }
 
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 99;
 }
@@ -165,7 +191,7 @@ header {
 .menu, 
 .footer-content img {
     padding-left: 0;
-    margin-top: 22px;
+    margin-top: 2.5%;
 }
 
 .menu li{
@@ -213,7 +239,7 @@ button:not(.tabs_active):hover,
 
 .slider-content {
     position: relative;
-    height: 689px;
+    height: 594px;
 }
 
 .hr-slider {
@@ -240,7 +266,7 @@ button:not(.tabs_active):hover,
 .phone-items{
     display: flex;
     align-items: center;
-    margin: 9% 7.5%;
+    margin: 0 10.8%;
 }
 
 .slider-items {
@@ -250,7 +276,7 @@ button:not(.tabs_active):hover,
     overflow: hidden;
 }
 
-.icons div, 
+.icons_content div, 
 .name {
     overflow: hidden;
 }
@@ -261,15 +287,21 @@ button:not(.tabs_active):hover,
 }
 
 .iphone_vertical {
-    margin-left: 2px;
+    margin-left: 0.2%;
+    height: 62%;
+    width: 30%;
 }
 
 .iphone_horizontal {
-    margin-left: 73px;
+    margin-left: 9.3%;
+    height: 50%;
+    width: 60.4%;
 }
 
 .phones{
-    margin: 9% 22.6%;
+    margin: 0 25%;
+    width: 50.7%;
+    height: 50%;
 }
 
 .services {
@@ -290,7 +322,7 @@ button:not(.tabs_active):hover,
 .about-us-content p, 
 .get_quote_content p {
     line-height: 29px;
-    letter-spacing: -0.008em;
+    letter-spacing: -0.01em;
     word-spacing: -0.01em;
     
 }
@@ -307,12 +339,12 @@ p span {
 
 .icons {
     padding: 0;
-    margin-top: 45.5px;
+    margin-top: 48px;
     height: 50%;
 }
 
-.icons, 
-.pictures, 
+.icons_content, 
+.pictures ul, 
 .navigation, 
 .photos, 
 .block,
@@ -320,35 +352,35 @@ p span {
     display: flex;
 }
 
-.icons, 
-.pictures, 
+.icons_content, 
 .navigation, 
 .photos, 
-.footer-content {
+.footer-content,
+.block {
     justify-content: space-between;
 }
 
-.icons, 
-.pictures, 
+.icons_content, 
+.pictures ul, 
 .navigation {
     flex-wrap: wrap;
 }
 
-.icons div {
-    height: 40%;
+.icons_content div {
+    height: 37%;
 }
 
-.icons img {
+.icons_content img {
     float: left;
     margin-right: 19px;
 }
 
-.icons p {
+.icons_content p {
     margin-left: 80px;
     text-overflow: ellipsis;
 }
 
-.icons p, 
+.icons_content p, 
 .photos p, 
 .information p, 
 .services p, 
@@ -357,11 +389,15 @@ p span {
     text-align: justify;
 }
 
-.icons p, 
+.icons_content p, 
 .submit, 
 .describe::placeholder, 
 .information p {
     line-height: 22px;
+}
+
+.icons_content {
+    height: 100%;
 }
 
 .name {
@@ -402,8 +438,8 @@ button:hover,
 }
 
 .pictures {
-    padding-top: 19px;
-    height: 621px;
+    margin: 0 30px;
+    height: 72%;
 }
 
 .pictures img:nth-child(n+13) {
@@ -411,14 +447,38 @@ button:hover,
     border: 5px solid #767e9e;
 }
 
-.pictures, 
 .get_quote_content p:not(.information p) {
     padding-top: 19px;
     margin: 0;
 }
+.pictures ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 9px;
+}
+
+.pictures li {
+    margin: 10px;
+    flex: 1 0 20%;
+    height: calc(100vw * 0.15);
+}
+
+.pictures .li::before {
+    content: "";
+    float: left;
+    padding-top: 100%;
+}
 
 .pictures img {
-    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .pictures li {
+        flex: 1 0 35%;
+        margin: 5px;
+    }
 }
 
 .about-us-content {
@@ -430,19 +490,27 @@ button:hover,
 }
 
 .photos p {
-    margin-top: 9px;
+    margin: 9px 0;
     line-height: 21px;
 
 }
 
 .photos div, 
-.information, 
-.icons div {
+.icons_content div {
     width: 300px;
+}
+
+.information {
+    width: 44.5%;
 }
 
 .photos img {
     margin-bottom: 13px;
+}
+
+.portrait {
+    width: 300px;
+    height: 300px;
 }
 
 .photos p span {
@@ -463,6 +531,10 @@ button:hover,
     margin-right: 4px;
 }
 
+.footer_media {
+    margin-top: 20px;
+}
+
 .get_quote_content p {
     margin-bottom: 45px;
 }
@@ -470,8 +542,8 @@ button:hover,
 .data_input, 
 .describe, 
 .submit {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     border-width: 0;
     border-radius: 5px;
     outline: none;
@@ -492,11 +564,11 @@ button:hover,
 form, 
 .data_input, 
 .describe {
-    width: 590px;
+    width: 96%;
 }
 
 .data_input{
-    margin-bottom: 16px;
+    margin-bottom: 2.6%;
     height: 36px;
 }
 
@@ -521,8 +593,8 @@ form,
 }
 
 .block {
-    justify-content: space-between;
     height: 431px;
+    margin-top: 4.5%;
 }
 
 .contact {
@@ -530,7 +602,6 @@ form,
 }
 
 .information p {
-    margin-top: 0;
     margin-bottom: 23px;
     letter-spacing: 0;
     word-spacing: -0.05em;
@@ -581,7 +652,7 @@ a {
 
 .copyright {
     margin-top: 30px;
-    margin-left: 3px;
+    margin-left: 43px;
 }
 
 #black_vert, 
@@ -592,18 +663,18 @@ a {
 }
 
 #black_vert{
-    left: 9.2%;
-    width: 189px;
-    height: 335px;
-    margin-top: -10px;
+    left: 12.3%;
+    width: 18.6%;
+    height: 69%;
+    margin-top: -1%;
     background-color: #000000;
 }
 
 #black_hor{
-    left: 47.4%;
-    width: 334px;
-    height: 189px;
-    margin-top: -12px;
+    right: 19.8%;
+    width: 32.7%;
+    height: 39%;
+    margin-top: -1.2%;
     background-color: #000000;
 }
 
@@ -643,22 +714,21 @@ a {
     position: absolute;
     top: 45.3%;
     bottom: 0;
-    width: 180px;
+    width: 4.5%;
 }
 
 .control.right {
-    right: -15.5%;
+    right: 2.5%;
     left: auto;
 }
 
 .control.left {
-    left: -1.5%;
+    left: 2.5%;
     right: auto;
 }
 
 .control img {
     cursor: pointer;
-    margin-top: 50px;
 }
 
 .item{
@@ -719,12 +789,12 @@ a {
     }
 }
 
-@media (max-width: 940px) {
+/* @media (max-width: 940px) {
     .description {
         flex-direction: column;
         align-items: center;
     }
-}
+} */
 
 @media (max-width: 640px) {
     .control > .arrow {
@@ -755,21 +825,137 @@ a {
 
 .vert_phone_button {
     top: 86%;
-    left: 17.8%;
+    left: 20.3%;
 }
 
 .hor_phone_button {
-    left: 42.8%;
+    left: 43.4%;
     top: 44.7%;
 }
 
 .vert_phone_button, 
 .hor_phone_button {
     position: absolute;
-    width: 25px;
-    height: 25px;
+    width: 2.5%;
+    height: 5.5%;
 }
 
 #result_desrcipt {
     overflow-wrap: break-word;
+}
+
+@media (max-width: 1019px) {
+    h1 {
+        margin-top: -2.5%;
+    }
+
+    .slider,
+    .slider-content {
+        height: calc(100vw * 0.57);
+    }
+
+    .services {
+        height: calc(100vw * 0.848);
+    }
+
+    .icons div {
+        flex: 1 0 35%;
+    }
+
+    .icons_content div {
+        margin-right: 5%;
+        height: 24%;
+    }
+
+    .icons_content div:nth-child(2n) {
+        margin-left: 3%;
+    }
+
+    .icons {
+        margin-top: 5%;
+        height: 64.5%;
+    }
+
+    .portfolio-content p{
+        letter-spacing: -0.001em;
+        word-spacing: 0.04em;
+    }
+    .portfolio-content {
+        height: calc(100vw * 1.395);
+    }
+
+    .pictures li {
+        flex: 1 0 25%;
+        height: calc(100vw * 0.234);
+    }
+
+    .pictures ul {
+        margin-top: 19px;
+    }
+
+    .about-us h2,
+    .get_quote h2 {
+        padding-top: 54px;
+    }
+
+    .photos {
+        margin-top: 5%;
+    }
+
+    .name {
+        margin-bottom: 0;
+    }
+
+    .photos p,
+    h3.contact {
+        margin: 0;
+    }
+
+    .portrait {
+        width: calc(100vw * 0.278);
+        height: calc(100vw * 0.278);
+    }
+
+    .photos div {
+        width: 31.71%;
+    }
+
+    .photos .social_media {
+        width: 100%;
+    }
+
+    .social_media {
+        margin-top: 6%;
+    }
+
+    .about-us-content {
+        height: calc(100vw * 0.844);
+    }
+
+    .block {
+        margin-top: -2.2%;
+        height: calc(100vw * 0.465);
+    }
+
+    form, 
+    .data_input, 
+    .describe {
+        width: 94.5%;
+    }
+
+    .describe {
+        height: calc(100vw * 0.19);
+    }
+
+    .get_quote {
+        height: calc(100vw * 0.796);
+    }
+
+    .information {
+        width: 58%;
+    }
+
+    .information p {
+        margin-bottom: 5.8%;
+    }
 }
