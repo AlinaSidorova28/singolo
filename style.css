@@ -815,16 +815,6 @@ a {
     z-index: 9999;
 }
 
-.dark-background {
-    position: absolute;
-    z-index: 9996;
-    width: 100vw;
-    height: 100vh;
-    background-color: #2d303a;
-    opacity: 0.7;
-    transition: opacity 0.6s;
-}
-
 .transparent {
     display: none;
 }
@@ -1030,6 +1020,16 @@ a {
         padding-inline-start: 0;
         top: 225px;
         left: 71px;
+    }
+
+    .dark-background {
+        position: absolute;
+        z-index: 9996;
+        width: 100vw;
+        height: 100vh;
+        background-color: #2d303a;
+        opacity: 0.7;
+        transition: opacity 0.6s;
     }
 
     .slider, 
