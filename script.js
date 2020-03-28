@@ -8,6 +8,11 @@ const pictures = document.getElementById('pictures');
 const button = document.getElementById('button');
 const close_button = document.getElementById('close-btn');
 const slider = document.getElementById('slider');
+const burger = document.querySelector(".burger");
+const header = document.querySelector("header");
+const logo = document.querySelector(".logo");
+const nav = header.querySelector("nav");
+const headerBackground = header.querySelector(".dark-background");
 
 
 let pic_array = document.querySelectorAll('#pictures img');
@@ -17,6 +22,7 @@ let pic_array = document.querySelectorAll('#pictures img');
 links.forEach(el => el.addEventListener('click', (event) => {
     links.forEach(el => el.classList.remove('menu_active'));
     event.target.classList.add('menu_active');
+    setTimeout(showMenu, 700);
 }));
 
 document.addEventListener('scroll', onScroll);
@@ -157,3 +163,15 @@ document.querySelector('.arrow.right').addEventListener('click', function() {
         changeColor();
     }
 });
+
+// меню-бургер
+burger.addEventListener('click', showMenu);
+
+function showMenu() {
+    burger.classList.toggle('rotated90');
+    headerBackground.classList.toggle('transparent');
+    nav.classList.toggle('to-right');
+    logo.classList.toggle('to-left');
+}
+
+headerBackground.addEventListener('click', showMenu);
