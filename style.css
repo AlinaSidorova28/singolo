@@ -2,6 +2,14 @@ html{
     scroll-behavior: smooth;
 }
 
+.slider,
+.services,
+.portfolio,
+.about-us,
+.get_quote {
+    scroll-margin-top: 75px;
+}
+
 body, 
 .submit,
 .data_input::placeholder,  
@@ -32,7 +40,6 @@ footer {
 .footer-content, 
 .block {
     max-width: 1020px;
-    /* min-width: 375px; */
     margin: 0 auto;
 }
 
@@ -345,7 +352,7 @@ p span {
 }
 
 .icons_content, 
-.pictures ul, 
+.pictures, 
 .navigation, 
 .photos, 
 .block,
@@ -362,13 +369,13 @@ p span {
 }
 
 .icons_content, 
-.pictures ul, 
+.pictures, 
 .navigation {
     flex-wrap: wrap;
 }
 
 .icons_content div {
-    height: 37%;
+    height: 104px;
 }
 
 .icons_content img {
@@ -407,7 +414,7 @@ p span {
 }
 
 .portfolio-content {
-    height: 863px;
+    padding-bottom: 56px;
 }
 
 .portfolio-content p {
@@ -440,10 +447,12 @@ button:hover,
 
 .pictures {
     margin: 0 30px;
-    height: 72%;
+    padding: 0;
+    margin-top: 9px;
+    height: 67%;
 }
 
-.pictures li:nth-child(n+13) {
+.pictures img:nth-child(n+13) {
     display: none;
 }
 
@@ -451,31 +460,16 @@ button:hover,
     padding-top: 19px;
     margin: 0;
 }
-.pictures ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 9px;
-}
-
-.pictures li {
-    margin: 10px;
-    flex: 1 0 20%;
-    height: calc(100vh * 0.259);
-}
-
-.pictures .li::before {
-    content: "";
-    float: left;
-    padding-top: 100%;
-}
 
 .pictures img {
-    width: 100%;
-    height: 100%;
+    margin: 10px;
+    flex: 1 0 20%;
+    min-width: 100px;
+    height: auto;
 }
 
 .about-us-content {
-    height: 728px;
+    padding-bottom: 52px;
 }
 
 .photos {
@@ -586,7 +580,7 @@ form,
 }
 
 .block {
-    height: 431px;
+    padding-bottom: 13px;
     margin-top: 4.5%;
 }
 
@@ -831,37 +825,36 @@ a {
     }
 
     .services {
-        height: calc(100vw * 0.87);
-    }
-
-    .icons div {
-        flex: 1 0 35%;
+        padding-bottom: 174px;
     }
 
     .icons_content div {
         margin-right: 5%;
-        height: 24%;
     }
 
     .icons {
-        margin-top: 5%;
-        height: 64.5%;
+        margin-top: 42px;
+        height: 86.5%;
     }
 
-    .portfolio-content p{
+    .portfolio-content p {
         letter-spacing: -0.001em;
         word-spacing: 0.04em;
     }
+    
     .portfolio-content {
-        height: calc(100vw * 1.428);
+        padding-bottom: 58px;
     }
 
-    .pictures li {
-        flex: 1 0 25%;
-        height: calc(100vh * 0.254);
+    .pictures {
+        height: 94.2%;
     }
 
-    .pictures ul {
+    .pictures img {
+        flex-basis: 25%;
+    }
+
+    .pictures {
         margin-top: 19px;
     }
 
@@ -900,13 +893,9 @@ a {
         margin-top: 6%;
     }
 
-    .about-us-content {
-        height: calc(100vw * 0.863);
-    }
-
     .block {
         margin-top: -2.2%;
-        height: calc(100vw * 0.465);
+        padding-bottom: 41px;
     }
 
     form, 
@@ -916,11 +905,7 @@ a {
     }
 
     .describe {
-        height: calc(100vw * 0.19);
-    }
-
-    .get_quote {
-        height: calc(100vw * 0.814);
+        height: calc(100vw * 0.195);
     }
 
     .information {
@@ -932,13 +917,15 @@ a {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1019px) {
-    .icons_content div:nth-child(2n) {
-        margin-left: 3%;
-    }
-}
-
 @media (max-width: 767px) {
+    .slider,
+    .services,
+    .portfolio,
+    .about-us,
+    .get_quote {
+        scroll-margin-top: 71px;
+    }
+
     h1,
     h2,
     .paragraph p,
@@ -949,7 +936,7 @@ a {
     #tabs,
     .photos,
     .block {
-        margin-left: 8%;
+        margin-left: 30px;
     }
 
     .menu,
@@ -959,7 +946,7 @@ a {
     .photos,
     .block,
     .footer_media {
-        margin-right: 8%;
+        margin-right: 30px;
     }
 
     .menu,
@@ -982,7 +969,7 @@ a {
     }
 
     .navigation {
-        height: calc(100vw * 0.187);
+        height: 71px;
     }
 
     .hr-nav {
@@ -1017,33 +1004,29 @@ a {
     }
 
     .services {
-        height: calc(100vw * 2.735);
+        height: 950px;
+        padding-bottom: 76px;
     }
 
     .icons {
         margin-top: 8.5%;
-    }
-
-    .icons div {
-        flex: 1 0 55%;
+        height: 73.5%;
     }
 
     .icons_content div {
         margin: 0;
-        margin-bottom: 5%;
-        height: 15.7%;
     }
 
     .portfolio h2 {
         padding-top: 43px;
     }
 
-    .pictures li:nth-child(n+9) {
+    .pictures img:nth-child(n+9) {
         display: none;
     }
 
     .portfolio-content {
-        height: calc(100vw * 2.25);
+        padding-bottom: 32px;
     }
 
     .portfolio-content p, 
@@ -1056,13 +1039,13 @@ a {
     }
 
     .pictures {
-        margin: 0 23px;
+        margin: 19px 23px 0 23px;
+        height: 67%;
     }
 
-    .pictures li {
-        flex: 1 0 35%;
+    .pictures img {
+        flex-basis: 35%;
         margin: 7px;
-        height: calc(100vh * 0.177);
     }
 
     .about-us h2 {
@@ -1074,7 +1057,7 @@ a {
     }
 
     .about-us-content {
-        height: calc(100vw * 4.66);
+        padding-bottom: 6px;
     }
 
     .icons_content p, 
@@ -1101,7 +1084,8 @@ a {
     }
 
     .photos,
-    .block {
+    .block,
+    .icons_content {
         flex-direction: column;
         margin-top: 7%;
     }
@@ -1115,10 +1099,6 @@ a {
     .social_media {
         margin-top: 4%;
         margin-bottom: 5.8%;
-    }
-
-    .get_quote {
-        height: calc(100vw * 2.565);
     }
 
     .get_quote_content p,
@@ -1146,6 +1126,10 @@ a {
         height: 50px;
     }
 
+    .block {
+        padding-bottom: 35px;
+    }
+
     .information {
         margin-top: 9%;
     }
@@ -1162,5 +1146,43 @@ a {
 }
 
 @media (max-width: 374px) {
+    .icons_content {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 30px;
+    }
 
+    .icons_content div {
+        width: 100%;
+        height: 16%;
+    }
+}
+
+@media (hover: hover) and (max-width: 767px) {
+    /* .menu a:hover {
+        color: inherit;
+    } */
+
+    .social_media img:hover, 
+    .footer-content img:hover {
+        opacity: 1;
+    }
+
+    .submit:hover {
+        box-shadow: unset;
+        color: #886A30;
+    }
+
+    .submit:active {
+        box-shadow: 0 0 5px #4e0202;
+        color: #dedede;
+    }
+
+    .information a:hover {
+        color: #f0d8d9;
+    }
+
+    .information a:active {
+        color: #4e0202;
+    }
 }
