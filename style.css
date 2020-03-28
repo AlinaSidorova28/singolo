@@ -289,11 +289,6 @@ button:not(.tabs_active):hover,
     overflow: hidden;
 }
 
-.social_media img:hover, 
-.footer-content img:hover {
-    opacity: 0.5;
-}
-
 .iphone_vertical {
     margin-left: 0.2%;
     height: 62%;
@@ -560,8 +555,7 @@ form,
 }
 
 .data_input:focus, 
-.describe:focus, 
-.submit:hover {
+.describe:focus {
     box-shadow: 0 0 5px #4e0202;
 }
 
@@ -623,10 +617,6 @@ form,
 a {
     text-decoration: none;
     cursor: pointer;
-}
-
-.information a:hover {
-    color: #4e0202;
 }
 
 .footer-content {
@@ -965,7 +955,7 @@ a {
 
     .slider, 
     .slider-content {
-        height: calc(100vw * 0.574);
+        height: calc(100vw * 0.587);
     }
 
     .navigation {
@@ -1005,7 +995,7 @@ a {
 
     .services {
         height: 950px;
-        padding-bottom: 76px;
+        padding-bottom: 83px;
     }
 
     .icons {
@@ -1057,7 +1047,7 @@ a {
     }
 
     .about-us-content {
-        padding-bottom: 6px;
+        padding-bottom: 12px;
     }
 
     .icons_content p, 
@@ -1127,7 +1117,7 @@ a {
     }
 
     .block {
-        padding-bottom: 35px;
+        padding-bottom: 41px;
     }
 
     .information {
@@ -1142,6 +1132,22 @@ a {
     .footer_media {
         margin-right: auto;
         margin-left: auto;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .submit:hover {
+        color: #886A30;
+    }
+
+    .submit:active {
+        box-shadow: 0 0 5px #4e0202;
+    }
+
+    .information a:active {
+        color: #4e0202;
     }
 }
 
@@ -1158,31 +1164,18 @@ a {
     }
 }
 
-@media (hover: hover) and (max-width: 767px) {
-    /* .menu a:hover {
-        color: inherit;
-    } */
-
+@media (min-width: 768px) {
     .social_media img:hover, 
     .footer-content img:hover {
-        opacity: 1;
+        opacity: 0.5;
     }
 
-    .submit:hover {
-        box-shadow: unset;
-        color: #886A30;
-    }
-
+    .submit:hover,
     .submit:active {
         box-shadow: 0 0 5px #4e0202;
-        color: #dedede;
     }
 
     .information a:hover {
-        color: #f0d8d9;
-    }
-
-    .information a:active {
         color: #4e0202;
     }
 }
