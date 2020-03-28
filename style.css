@@ -32,6 +32,7 @@ footer {
 .footer-content, 
 .block {
     max-width: 1020px;
+    /* min-width: 375px; */
     margin: 0 auto;
 }
 
@@ -442,9 +443,8 @@ button:hover,
     height: 72%;
 }
 
-.pictures img:nth-child(n+13) {
+.pictures li:nth-child(n+13) {
     display: none;
-    border: 5px solid #767e9e;
 }
 
 .get_quote_content p:not(.information p) {
@@ -460,7 +460,7 @@ button:hover,
 .pictures li {
     margin: 10px;
     flex: 1 0 20%;
-    height: calc(100vw * 0.15);
+    height: calc(100vh * 0.259);
 }
 
 .pictures .li::before {
@@ -472,13 +472,6 @@ button:hover,
 .pictures img {
     width: 100%;
     height: 100%;
-}
-
-@media (max-width: 767px) {
-    .pictures li {
-        flex: 1 0 35%;
-        margin: 5px;
-    }
 }
 
 .about-us-content {
@@ -564,7 +557,7 @@ button:hover,
 form, 
 .data_input, 
 .describe {
-    width: 96%;
+    width: 95.8%;
 }
 
 .data_input{
@@ -714,7 +707,7 @@ a {
     position: absolute;
     top: 45.3%;
     bottom: 0;
-    width: 4.5%;
+    width: 50px;
 }
 
 .control.right {
@@ -725,10 +718,6 @@ a {
 .control.left {
     left: 2.5%;
     right: auto;
-}
-
-.control img {
-    cursor: pointer;
 }
 
 .item{
@@ -769,6 +758,14 @@ a {
 .arrow {
     display: inline-block;
     position: absolute;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.arrow img {
+    margin-top: 20%;
 }
 
 @keyframes left {
@@ -786,27 +783,6 @@ a {
     }
     to {
         left: 0;
-    }
-}
-
-/* @media (max-width: 940px) {
-    .description {
-        flex-direction: column;
-        align-items: center;
-    }
-} */
-
-@media (max-width: 640px) {
-    .control > .arrow {
-        display: none;
-    }
-
-    .project-name {
-        display: none;
-    }
-
-    .description {
-        border: 0;
     }
 }
 
@@ -851,11 +827,11 @@ a {
 
     .slider,
     .slider-content {
-        height: calc(100vw * 0.57);
+        height: calc(100vw * 0.58);
     }
 
     .services {
-        height: calc(100vw * 0.848);
+        height: calc(100vw * 0.87);
     }
 
     .icons div {
@@ -865,10 +841,6 @@ a {
     .icons_content div {
         margin-right: 5%;
         height: 24%;
-    }
-
-    .icons_content div:nth-child(2n) {
-        margin-left: 3%;
     }
 
     .icons {
@@ -881,12 +853,12 @@ a {
         word-spacing: 0.04em;
     }
     .portfolio-content {
-        height: calc(100vw * 1.395);
+        height: calc(100vw * 1.428);
     }
 
     .pictures li {
         flex: 1 0 25%;
-        height: calc(100vw * 0.234);
+        height: calc(100vh * 0.254);
     }
 
     .pictures ul {
@@ -912,8 +884,8 @@ a {
     }
 
     .portrait {
-        width: calc(100vw * 0.278);
-        height: calc(100vw * 0.278);
+        width: calc(100vw * 0.286);
+        height: calc(100vw * 0.286);    
     }
 
     .photos div {
@@ -929,7 +901,7 @@ a {
     }
 
     .about-us-content {
-        height: calc(100vw * 0.844);
+        height: calc(100vw * 0.863);
     }
 
     .block {
@@ -948,7 +920,7 @@ a {
     }
 
     .get_quote {
-        height: calc(100vw * 0.796);
+        height: calc(100vw * 0.814);
     }
 
     .information {
@@ -958,4 +930,237 @@ a {
     .information p {
         margin-bottom: 5.8%;
     }
+}
+
+@media (min-width: 768px) and (max-width: 1019px) {
+    .icons_content div:nth-child(2n) {
+        margin-left: 3%;
+    }
+}
+
+@media (max-width: 767px) {
+    h1,
+    h2,
+    .paragraph p,
+    .portfolio-content p,
+    .about-us-content p,
+    .get_quote_content p,
+    .icons_content,
+    #tabs,
+    .photos,
+    .block {
+        margin-left: 8%;
+    }
+
+    .menu,
+    .portfolio-content p,
+    .about-us-content p,
+    .get_quote_content p,
+    .photos,
+    .block,
+    .footer_media {
+        margin-right: 8%;
+    }
+
+    .menu,
+    .copyright {
+        display: none;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin: 0 auto;
+    }
+
+    .logo::after {
+        font-size: 20px;
+    }
+
+    .slider, 
+    .slider-content {
+        height: calc(100vw * 0.574);
+    }
+
+    .navigation {
+        height: calc(100vw * 0.187);
+    }
+
+    .hr-nav {
+        display: none;
+    }
+
+    .control {
+        width: 9%;
+        top: 41.3%;
+    }
+
+    .control.left {
+        left: 0;
+    }
+
+    .control.right {
+        right: 0;
+    }
+
+    .arrow {
+        height: 2.5%;
+        width: 100%;
+    }
+
+    .paragraph p {
+        text-align: left;
+        line-height: 30px;
+    }
+
+    .paragraph {
+        padding-top: 9.5%;
+    }
+
+    .services {
+        height: calc(100vw * 2.735);
+    }
+
+    .icons {
+        margin-top: 8.5%;
+    }
+
+    .icons div {
+        flex: 1 0 55%;
+    }
+
+    .icons_content div {
+        margin: 0;
+        margin-bottom: 5%;
+        height: 15.7%;
+    }
+
+    .portfolio h2 {
+        padding-top: 43px;
+    }
+
+    .pictures li:nth-child(n+9) {
+        display: none;
+    }
+
+    .portfolio-content {
+        height: calc(100vw * 2.25);
+    }
+
+    .portfolio-content p, 
+    .photos p {
+        letter-spacing: -0.011em;
+    }
+
+    .portfolio-content p {
+        margin-bottom: 15px;
+    }
+
+    .pictures {
+        margin: 0 23px;
+    }
+
+    .pictures li {
+        flex: 1 0 35%;
+        margin: 7px;
+        height: calc(100vh * 0.177);
+    }
+
+    .about-us h2 {
+        padding-top: 34px;
+    }
+
+    .get_quote h2 {
+        padding-top: 12%;
+    }
+
+    .about-us-content {
+        height: calc(100vw * 4.66);
+    }
+
+    .icons_content p, 
+    .photos p, 
+    .services p, 
+    .about-us-content p, 
+    .get_quote_content p {
+        text-align: left;
+    }
+
+    .about-us-content p, 
+    .get_quote_content p {
+        line-height: 30px;
+    }
+
+    .photos p,
+    .information p {
+        margin: 0;
+        line-height: 23px;
+    }
+
+    .portrait {
+        height: 100%;
+    }
+
+    .photos,
+    .block {
+        flex-direction: column;
+        margin-top: 7%;
+    }
+
+    .portrait,
+    .photos div,
+    .information {
+        width: 100%;
+    }
+
+    .social_media {
+        margin-top: 4%;
+        margin-bottom: 5.8%;
+    }
+
+    .get_quote {
+        height: calc(100vw * 2.565);
+    }
+
+    .get_quote_content p,
+    .information .location, 
+    .information .telephone, 
+    .information .mail {
+        margin-bottom: 0;
+    }
+
+    form, .data_input, 
+    .describe {
+        width: 97.6%;
+    }
+
+    .data_input {
+        margin-bottom: 3.6%;
+    }
+
+    .describe {
+        height: calc(100vw * 0.4);
+    }
+
+    .submit {
+        width: 102.5%;
+        height: 50px;
+    }
+
+    .information {
+        margin-top: 9%;
+    }
+
+    .information p {
+        text-align: justify;
+        margin-bottom: 3.5%;
+    }
+
+    .footer_media {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 374px) {
+
 }
